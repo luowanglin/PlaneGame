@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="DDF-of-RYX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BurstAircraftLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8MA-ap-YHf">
+                                <rect key="frame" x="153" y="71" width="295" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQg-Of-IO8">
+                                <rect key="frame" x="250" y="324" width="100" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="开始游戏">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fY1-ec-YTh" kind="show" id="S1s-Kw-HDm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DDF-of-RYX" secondAttribute="trailing" id="4TK-HM-WNE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DDF-of-RYX" secondAttribute="bottom" id="87c-iM-kz7"/>
+                            <constraint firstItem="DDF-of-RYX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ANc-Fr-q2u"/>
+                            <constraint firstItem="IQg-Of-IO8" firstAttribute="centerX" secondItem="DDF-of-RYX" secondAttribute="centerX" id="NBm-Yv-MAr"/>
+                            <constraint firstItem="DDF-of-RYX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Pxv-IA-A7e"/>
+                            <constraint firstItem="8MA-ap-YHf" firstAttribute="centerX" secondItem="DDF-of-RYX" secondAttribute="centerX" id="RWO-Fq-hC1"/>
+                            <constraint firstItem="IQg-Of-IO8" firstAttribute="top" secondItem="8MA-ap-YHf" secondAttribute="bottom" constant="103" id="gkc-Lf-d3a"/>
+                            <constraint firstItem="DDF-of-RYX" firstAttribute="top" secondItem="8MA-ap-YHf" secondAttribute="bottom" constant="-221" id="omv-E1-1kZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startBtn" destination="IQg-Of-IO8" id="BIG-Fy-B9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="367"/>
+        </scene>
+        <!--Play Game View Controller-->
+        <scene sceneID="1Dc-ps-YaB">
+            <objects>
+                <viewController id="fY1-ec-YTh" customClass="PlayGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpv-2F-4m2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Neb-7k-WbE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2jY-UL-ixm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09f-2F-Pzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BurstAircraftLogo.png" width="295" height="150"/>
+        <image name="background_2.png" width="320" height="568"/>
+    </resources>
+</document>
